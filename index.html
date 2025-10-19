@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
     <style>
         :root {
             --primary-color: #007bff;
@@ -19,7 +18,6 @@
             --light-text-color: #888888;
             --border-color: #e0e0e0;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--background-color);
@@ -27,7 +25,6 @@
             padding-bottom: 60px;
             color: var(--text-color);
         }
-
         .container {
             max-width: 450px;
             margin: 0 auto;
@@ -37,7 +34,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .header {
             display: flex;
             align-items: center;
@@ -58,7 +54,6 @@
             background-color: #eee;
             object-fit: cover;
         }
-
         .header-user-info h3 {
             margin: 0;
             font-size: 16px;
@@ -70,13 +65,11 @@
             font-size: 12px;
             color: var(--light-text-color);
         }
-
         .content {
             flex-grow: 1;
             padding: 20px;
             overflow-y: auto;
         }
-
         .card {
             background-color: var(--background-color);
             border-radius: 12px;
@@ -86,7 +79,6 @@
             text-align: center;
             border: 1px solid var(--border-color);
         }
-
         .card-header {
             font-size: 18px;
             font-weight: 600;
@@ -101,26 +93,22 @@
             margin-right: 8px;
             color: var(--primary-color);
         }
-
         .balance-card .balance {
             font-size: 36px;
             font-weight: 700;
             color: var(--secondary-color);
             margin: 10px 0;
         }
-
         .card-label {
             font-size: 14px;
             color: var(--light-text-color);
         }
-
         .dashboard-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin-top: 20px;
         }
-
         .dashboard-item {
             background-color: var(--card-background);
             border-radius: 12px;
@@ -128,24 +116,20 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
-
         .dashboard-item .material-icons {
             font-size: 32px;
             margin-bottom: 10px;
             color: var(--primary-color);
         }
-
         .dashboard-item-value {
             font-size: 24px;
             font-weight: 700;
             color: var(--text-color);
         }
-
         .dashboard-item-label {
             font-size: 12px;
             color: var(--light-text-color);
         }
-
         .primary-btn, .secondary-btn {
             border: none;
             padding: 15px;
@@ -165,12 +149,10 @@
         .primary-btn .material-icons, .secondary-btn .material-icons {
             font-size: 20px;
         }
-
         .primary-btn {
             background-color: var(--primary-color);
             color: #fff;
         }
-
         .primary-btn:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
@@ -181,13 +163,11 @@
             cursor: not-allowed;
             transform: none;
         }
-
         .secondary-btn {
             background-color: #f0f0f0;
             color: var(--text-color);
             border: 1px solid var(--border-color);
         }
-
         .secondary-btn:hover {
             background-color: #e0e0e0;
             transform: translateY(-2px);
@@ -200,14 +180,12 @@
             overflow: hidden;
             margin-top: 10px;
         }
-
         .progress-bar {
             height: 100%;
             background-color: var(--primary-color);
             width: 0;
             transition: width 0.5s ease-in-out;
         }
-
         .footer-nav {
             display: flex;
             justify-content: space-around;
@@ -220,7 +198,6 @@
             border-top: 1px solid var(--border-color);
             box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
         }
-
         .nav-item {
             display: flex;
             flex-direction: column;
@@ -231,26 +208,21 @@
             transition: color 0.3s;
             flex: 1;
         }
-
         .nav-item .material-icons, .nav-item .fa-solid {
             font-size: 24px;
             margin-bottom: 5px;
         }
-
         .nav-item-label {
             font-size: 12px;
             font-weight: 500;
         }
-
         .nav-item.active {
             color: var(--primary-color);
         }
-
         .page {
             display: none;
             animation: fadeIn 0.5s;
         }
-
         .page.active {
             display: block;
         }
@@ -297,7 +269,6 @@
         }
         .profile-label { font-size: 16px; color: var(--text-color); }
         .profile-value { font-size: 16px; font-weight: 600; color: var(--primary-color); }
-
         .form-group {
             margin-bottom: 15px;
             text-align: left;
@@ -327,7 +298,6 @@
                 <p>Welcome to the Earning App!</p>
             </div>
         </header>
-
         <main class="content">
             <section id="home-page" class="page active">
                 <div class="card balance-card">
@@ -363,7 +333,6 @@
                     <div class="dashboard-item-value" id="total-referrals">0</div>
                 </div>
             </section>
-
             <section id="earn-page" class="page">
                 <div class="card">
                     <h2 class="card-header">
@@ -422,7 +391,6 @@
                     </form>
                 </div>
             </section>
-
             <section id="profile-page" class="page">
                 <div class="card" style="padding: 30px;">
                     <div class="profile-pic-container">
@@ -452,7 +420,6 @@
                 </div>
             </section>
         </main>
-
         <nav class="footer-nav">
             <div class="nav-item active" data-page="home-page">
                 <span class="material-icons">home</span>
@@ -472,16 +439,7 @@
             </div>
         </nav>
     </div>
-
-    <!-- 
-        =====================================================================
-        ====== অ্যাড নেটওয়ার্কের SDK বসানোর জায়গা (প্রথম অংশ) ======
-        =====================================================================
-        এখানে আপনার পছন্দের অ্যাড নেটওয়ার্কের দেওয়া <script> ট্যাগটি বসাতে হবে।
-        নিচের লাইনটি একটি উদাহরণ মাত্র। আপনি এটিকে পরিবর্তন করে আপনার নিজের কোড বসাবেন।
-    -->
-    <script src='//libtl.com/sdk.js' data-zone='9702412' data-sdk='show_9702412'></script>
-
+    <script src='//libtl.com/sdk.js' data-zone='10061025' data-sdk='show_10061025'></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tg = window.Telegram.WebApp;
@@ -490,31 +448,25 @@
             const userData = tg.initDataUnsafe.user;
             const defaultProfilePic40 = 'https://via.placeholder.com/40';
             const defaultProfilePic80 = 'https://via.placeholder.com/80';
-
             const navItems = document.querySelectorAll('.nav-item');
             const pages = document.querySelectorAll('.page');
             const watchAdBtn = document.getElementById('watch-ad-btn');
             const startEarningBtn = document.getElementById('start-earning-btn');
             const withdrawBtn = document.getElementById('withdraw-btn');
             const withdrawForm = document.getElementById('withdraw-form');
-
             const DAILY_ADS_LIMIT = 50;
             const AD_REWARD = 0.02; // BDT per ad
             const MIN_WITHDRAW_AMOUNT = 100;
-
             if (!localStorage.getItem('earnings')) {
                 localStorage.setItem('earnings', '0');
                 localStorage.setItem('adsWatched', '0');
                 localStorage.setItem('totalReferrals', '0');
             }
-
             function updateUI() {
                 const earnings = parseFloat(localStorage.getItem('earnings'));
                 const adsWatched = parseInt(localStorage.getItem('adsWatched'));
                 const referrals = parseInt(localStorage.getItem('totalReferrals'));
-
                 const formattedEarnings = earnings.toFixed(2);
-
                 if(userData) {
                     const fullName = `${userData.first_name || ''} ${userData.last_name || ''}`.trim();
                     document.getElementById('header-user-name').textContent = fullName || 'User';
@@ -536,13 +488,11 @@
                         document.getElementById('profile-page-pic').src = defaultProfilePic80;
                     }
                 }
-
                 // Update Home Page
                 document.getElementById('current-balance').textContent = `BDT ${formattedEarnings}`;
                 document.getElementById('total-earnings').textContent = `BDT ${formattedEarnings}`;
                 document.getElementById('ads-watched').textContent = adsWatched;
                 document.getElementById('total-referrals').textContent = referrals;
-
                 // Update Earn Page
                 document.getElementById('ad-progress-text').textContent = `Completed: ${adsWatched} / ${DAILY_ADS_LIMIT}`;
                 const progress = (adsWatched / DAILY_ADS_LIMIT) * 100;
@@ -551,34 +501,28 @@
                 watchAdBtn.disabled = adsWatched >= DAILY_ADS_LIMIT;
                 watchAdBtn.querySelector('span').textContent = adsWatched >= DAILY_ADS_LIMIT ? 'cancel' : 'play_circle_filled';
                 if(adsWatched >= DAILY_ADS_LIMIT) watchAdBtn.childNodes[0].nodeValue = "দৈনিক সীমা পৌঁছে গেছে ";
-
                 // Update Withdraw Page
                 document.getElementById('withdraw-balance-display').textContent = `BDT ${formattedEarnings}`;
                 document.getElementById('submit-withdraw-btn').disabled = earnings < MIN_WITHDRAW_AMOUNT;
                 if(earnings < MIN_WITHDRAW_AMOUNT) document.getElementById('submit-withdraw-btn').textContent = `ন্যূনতম BDT ${MIN_WITHDRAW_AMOUNT} প্রয়োজন`;
-
                 // Update Profile Page
                 document.getElementById('profile-balance').textContent = `BDT ${formattedEarnings}`;
                 document.getElementById('profile-earnings').textContent = `BDT ${formattedEarnings}`;
                 document.getElementById('profile-ads-watched').textContent = adsWatched;
                 document.getElementById('profile-referrals').textContent = referrals;
             }
-
             function showPage(targetPageId) {
                 navItems.forEach(nav => nav.classList.remove('active'));
                 pages.forEach(page => page.classList.remove('active'));
-
                 const activeNavItem = document.querySelector(`[data-page="${targetPageId}"]`);
                 if (activeNavItem) activeNavItem.classList.add('active');
                 
                 const activePage = document.getElementById(targetPageId);
                 if (activePage) activePage.classList.add('active');
             }
-
             navItems.forEach(item => {
                 item.addEventListener('click', () => showPage(item.getAttribute('data-page')));
             });
-
             startEarningBtn.addEventListener('click', () => showPage('earn-page'));
             withdrawBtn.addEventListener('click', () => showPage('withdraw-page'));
             
@@ -587,16 +531,14 @@
                     tg.showAlert('আপনার দৈনিক বিজ্ঞাপনের সীমা পৌঁছে গেছে।');
                     return;
                 }
-
                 watchAdBtn.disabled = true;
-
                 // --- অ্যাড নেটওয়ার্কের কোড কল করার জায়গা (দ্বিতীয় অংশ) ---
                 // ======================================================================
                 // এখানে আপনার অ্যাড নেটওয়ার্কের দেওয়া ফাংশনটি কল করতে হবে।
-                // নিচের 'show_9702412()' লাইনটি একটি উদাহরণ।
+                // নিচের 'show_10061025()' লাইনটি এখন ব্যবহার করা হচ্ছে।
                 // ======================================================================
-                if (typeof show_9702412 === 'function') {
-                    show_9702412().then(() => {
+                if (typeof show_10061025 === 'function') {
+                    show_10061025().then(() => {
                         let earnings = parseFloat(localStorage.getItem('earnings')) + AD_REWARD;
                         let currentAdsWatched = parseInt(localStorage.getItem('adsWatched')) + 1;
                         
@@ -608,6 +550,7 @@
                         tg.showAlert('বিজ্ঞাপনটি দেখাতে সমস্যা হয়েছে। আবার চেষ্টা করুন।');
                     }).finally(() => {
                         updateUI();
+                        watchAdBtn.disabled = false; // Add this line to re-enable button after ad attempt
                     });
                 } else {
                     // Fallback for testing in browser without Telegram
@@ -617,9 +560,9 @@
                     localStorage.setItem('adsWatched', currentAdsWatched.toString());
                     alert(`(Test Mode) You earned BDT ${AD_REWARD.toFixed(2)}!`);
                     updateUI();
+                    watchAdBtn.disabled = false; // Re-enable in fallback
                 }
             });
-
             withdrawForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const amount = parseFloat(document.getElementById('withdraw-amount').value);
@@ -642,7 +585,6 @@
                     }
                 });
             });
-
             updateUI();
         });
     </script>
